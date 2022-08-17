@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINK JAVASCRIPT -->
+    <script src="script.js"></script>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- LINK GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <title>Cálculo de esquadrias :)</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Cálculo Esquadrias</h1>
+    </header>
+    <main class="main-container">
+        <div class="inputs">
+
+            <div class="card areaAmbiente">
+                <label class="card-title" for="areaAmbiente">Área do ambiente</label>
+                <div>
+                    <input class="inputNumber" type="number" name="areaAmbiente" id="areaAmbiente" placeholder="Ex: 9.80">
+                    <span>m²</span>
+                </div>
+            </div>
+            
+            <div class="card dimensõesEsquadria">
+                <p class="card-title">Dimensões da esquadria</p>
+                <div class="dimensoesContainer">
+                    <div>
+                        <label for="largura">Largura</label>
+                        <input class="inputNumber" type="number" name="largura" id="largura" placeholder="Ex: 1.60">
+                        <span>m</span>
+                    </div>
+                    <div>
+                        <label for="altura">Altura</label>
+                        <input class="inputNumber" type="number" name="altura" id="altura" placeholder="Ex: 1.10">
+                        <span>m</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card razao">
+                <label for="razao">Razão para dividir</label>
+                <div>
+                    <span>1/</span>
+                    <input class="inputNumber" type="number" name="razao" id="razao" placeholder="Ex: 6">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="calculate">
+            <button onclick="Calcular()">Calcular! =></button>
+        </div>
+        <div class="result" id="result">
+        </div>
+    </main>
+    <footer class="footer">
+        Calculadora por rodeetc etc
+    </footer>
+
+</body>
+</html>

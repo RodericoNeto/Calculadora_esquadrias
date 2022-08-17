@@ -1,0 +1,174 @@
+:root {
+
+    --color-bg: #ebe7d4;
+    /* Eggshell */
+    --color-main: #2d938e;
+    /* dark electric blue */
+    --color-secondary: #1f4e46;
+    /* rich black FOGRA 29 */
+    --color-terciary: #2d936c;
+    /* green cyan */
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+}
+
+.header {
+    /* border: 1px solid rgb(144, 144, 155); */
+    background-color: var(--color-main);
+    text-align: center;
+    color: var(--color-bg);
+    height: 16vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 42px;
+    text-shadow: 0px 2px var(--color-secondary)
+}
+
+.main-container {
+    /* border: 1px solid blue; */
+    margin-top: 60px;
+    display: grid;
+    grid-template-areas:
+        'inputs calculate result';
+    height: 54vh;
+}
+
+
+.inputs {
+    /* border: 1px solid rgb(59, 59, 61); */
+    grid-area: inputs;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inputs label, input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.calculate {
+    /* border: 1px solid blue; */
+    grid-area: calculate;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.calculate button {
+    position: relative;
+    width: 140px;
+    padding: 18px 18px;
+    margin: 0;
+    float: left;
+    border-radius: 12px;
+    font-size: large;
+    color: #FFF;
+    text-decoration: none;
+    background-color: var(--color-main);
+    border: none;
+    border-bottom: 5px solid var(--color-secondary);
+    text-shadow: 0px 2px var(--color-secondary);
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+}
+
+.calculate button:hover,
+button:active {
+    -webkit-transform: translate(0px, 5px);
+    -ms-transform: translate(0px, 5px);
+    transform: translate(0px, 5px);
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+.result {
+    /* border: 1px solid blue; */
+    grid-area: result;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.result h2, h4{
+    color: var(--color-main);
+}
+
+.footer {
+    /* border: 1px solid rgb(144, 144, 155); */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-main);
+    color: var(--color-secondary);
+    box-shadow: 0px 2px 3px var(--color-secondary);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.dimensoesContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputNumber {
+    width: 70px;
+}
+
+.dimensoesContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 700px){
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 120vh;
+        margin: 20px;
+    }
+
+    .inputs {
+        height: 300px;
+    }
+
+    .result {
+        width: 90vw;
+    }
+}
